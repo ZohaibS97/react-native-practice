@@ -1,95 +1,115 @@
 import { Link } from "expo-router";
 import { Pressable, StyleSheet, Text, TextInput, View } from "react-native";
-
+import { borderSizing, colours, fontSize, spacing } from "../../theme";
 export default function Login() {
   return (
+    // main screen background
     <View style={styles.container}>
+      {/* start of header container */}
       <View style={styles.header}>
-        <Text style={styles.headerText}>Log in to continue</Text>
+        <Text style={styles.title}>Welcome back</Text>
+        <Text style={styles.subtitle}>Log in to continue</Text>
       </View>
+      {/* end of header container */}
+      {/* start of card container */}
       <View style={styles.card}>
+        {/* start of login detail */}
         <Text style={styles.label}>Email</Text>
         <TextInput
-          style={styles.TextInput}
+          style={styles.input}
           placeholder="yourEmail@gmail.com"
           keyboardType="email-address"
           autoCapitalize="none"
         />
         <Text style={styles.label}>Password</Text>
         <TextInput
-          style={styles.TextInput}
+          style={styles.input}
           placeholder="yourEmail@gmail.com"
           keyboardType="email-address"
           autoCapitalize="none"
         />
-
-        <Text style={styles.label}>Forgot password?</Text>
-
-        <Pressable style={styles.mainBtn}>
-          <Text style={styles.label}>Log in</Text>
+        {/* end of log in details */}
+        <Text>Forgot password?</Text>
+        {/* start of log in button */}
+        <Pressable style={styles.button}>
+          <Text style={styles.buttonText}>Log in</Text>
         </Pressable>
+        {/* end of login button */}
       </View>
-
+      {/* end of card container */}
+      {/* start of footer container */}
       <View style={styles.footer}>
-        <Text style={styles.label}>Don't have an account?</Text>
-        <Link href="/register" style={styles.mainBtnLink}>
+        <Text style={styles.footerText}>Don't have an account?</Text>
+        <Link href="/register" style={styles.footerLink}>
           Register
         </Link>
       </View>
+      {/* end of footer container */}
     </View>
+    // end of main screen
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingHorizontal: 24,
+    paddingHorizontal: spacing.lg,
     justifyContent: "center",
-    backgroundColor: "#F4F4FB",
-  },
-  card: {
-    backgroundColor: "#ffff",
-    padding: 24,
-    borderRadius: 20,
+    backgroundColor: colours.background,
   },
   header: {
     justifyContent: "center",
     alignItems: "center",
   },
-  headerText: {
-    color: "#1F2937",
-    fontSize: 28,
+  title: {
+    color: colours.heading,
+    fontSize: fontSize.xl,
     fontWeight: "700",
   },
-  TextInput: {
-    height: 52,
-    borderWidth: 1,
-    borderColor: "#D1D5DB",
-    borderRadius: 12,
-    paddingHorizontal: 16,
-    backgroundColor: "#F9FAFB",
-  },
-  label: {
-    fontSize: 14,
+  subtitle: {
+    color: colours.heading,
+    fontSize: fontSize.md,
     fontWeight: "600",
   },
-  mainBtn: {
+
+  card: {
+    padding: spacing.lg,
+    backgroundColor: colours.card,
+    borderRadius: borderSizing.xxl,
+  },
+
+  label: {
+    fontSize: fontSize.sm,
+    fontWeight: "600",
+  },
+  input: {
     height: 52,
     borderWidth: 1,
-    borderRadius: 12,
+    paddingHorizontal: spacing.md,
+    backgroundColor: colours.inputBackground,
+    borderColor: colours.inputBorder,
+    borderRadius: borderSizing.sm,
+  },
+
+  forgot: {},
+
+  button: {
+    height: 52,
+    backgroundColor: colours.primary,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#4F46E5",
+    borderRadius: borderSizing.sm,
   },
-  mainBtnLink: {
-    backgroundColor: "#4F46E5",
-    borderWidth: 1,
-    borderRadius: 12,
+  buttonText: {
+    fontSize: fontSize.md,
+    fontWeight: "600",
+    color: colours.buttonText,
   },
+
   footer: {
     flexDirection: "row",
-    justifyContent: "center",
-    alignItems: "center",
-    gap: 4,
+    gap: spacing.xs,
   },
+  footerText: {},
+  footerLink: {},
 });
