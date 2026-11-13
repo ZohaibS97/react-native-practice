@@ -1,9 +1,10 @@
 #HOW TO START PROJECT:
+
 1. npx create-expo-app@latest my-first-app
 2. cd my-first-app
 
 #RESET THE PROJECT:
-npm run reset-project   #MAKE SURE YOU RUN 'cd project-name' IN TERMINAL BEFORE YOU RESET.
+npm run reset-project #MAKE SURE YOU RUN 'cd project-name' IN TERMINAL BEFORE YOU RESET.
 
 #WRITING IN JAVASCRIPT?
 RENAME THE DEFAULT FILES INSIDE INDEX TO filename.js '.js' WILL CHANGE FROM TSX TO JS
@@ -19,3 +20,74 @@ Metro waiting on exp://192.168.1.23:8081
 › Press w │ open web › Press m │ toggle menu
 › Press ? │ show all commands › Ctrl+C │ stop
 
+#shortcuts, snippets:
+{
+  "React Native View": {
+    "prefix": "view",
+    "body": [
+      "<View>",
+      "\t$1",
+      "</View>"
+    ],
+    "description": "React Native View component"
+  },
+
+  "React Native Text": {
+    "prefix": "text",
+    "body": [
+      "<Text>$1</Text>"
+    ],
+    "description": "React Native Text component"
+  },
+
+  "React Native TextInput": {
+    "prefix": "texti",
+    "body": [
+      "<TextInput",
+      "\t$1",
+      "/>"
+    ],
+    "description": "React Native TextInput component"
+  },
+
+  "React Native Pressable": {
+	"prefix": "press",
+	"body": [
+	"<Pressable>",
+	"\t$1",
+	"</Pressable>"
+	],
+	"description": "React Native Pressable component"
+  },
+
+  "React Native ScrollView": {
+	"prefix": "scroll",
+	"body": [
+	"<ScrollView>",
+	"\t$1",
+	"</ScrollView>"
+	],
+	"description": "React Native ScrollView component"
+  },  
+
+  "React Native Image": {
+	"prefix": "image",
+	"body": [
+	"<Image>",
+	"\t$1",
+	"</Image>"
+	],
+	"description": "React Native Image component"
+  }, 
+
+"React Native Link": {
+	"prefix": "link",
+	"body": [
+	"<Link>",
+	"\t$1",
+	"</Link>"
+	],
+	"description": "React Native Link component"
+  }, 
+
+}
