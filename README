@@ -1,0 +1,21 @@
+#HOW TO START PROJECT:
+1. npx create-expo-app@latest my-first-app
+2. cd my-first-app
+
+#RESET THE PROJECT:
+npm run reset-project   #MAKE SURE YOU RUN 'cd project-name' IN TERMINAL BEFORE YOU RESET.
+
+#WRITING IN JAVASCRIPT?
+RENAME THE DEFAULT FILES INSIDE INDEX TO filename.js '.js' WILL CHANGE FROM TSX TO JS
+
+#CHECK IF PROJECT RUNS:
+npx expo start --clear
+
+#NPX EXPO START:
+Metro waiting on exp://192.168.1.23:8081
+› Scan the QR code above with Expo Go (Android) or the Camera app (iOS)
+› Press a │ open Android › Press j │ open debugger
+› Press i │ open iOS simulator › Press r │ reload app
+› Press w │ open web › Press m │ toggle menu
+› Press ? │ show all commands › Ctrl+C │ stop
+
